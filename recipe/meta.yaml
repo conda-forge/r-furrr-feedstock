@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: furrr_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/furrr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/furrr/furrr_{{ version }}.tar.gz
-  sha256: dd2937f7cad1bc69e7a512b2a777f82d6cb7e40fe99afa2049ca360f9352a9d1
+  sha256: 9d6483656fdb5b90e998e2c2f1494c721185079a1412316c6d391e1eade89e1b
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
-  number: 1002
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,16 +25,22 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-future >=1.6.2
-    - r-globals >=0.10.3
-    - r-purrr >=0.2.4
-    - r-rlang >=0.2.0
+    - r-ellipsis
+    - r-future >=1.19.1
+    - r-globals >=0.13.1
+    - r-lifecycle >=0.2.0
+    - r-purrr >=0.3.0
+    - r-rlang >=0.3.0
+    - r-vctrs >=0.3.2
   run:
     - r-base
-    - r-future >=1.6.2
-    - r-globals >=0.10.3
-    - r-purrr >=0.2.4
-    - r-rlang >=0.2.0
+    - r-ellipsis
+    - r-future >=1.19.1
+    - r-globals >=0.13.1
+    - r-lifecycle >=0.2.0
+    - r-purrr >=0.3.0
+    - r-rlang >=0.3.0
+    - r-vctrs >=0.3.2
 
 test:
   commands:
@@ -44,18 +49,12 @@ test:
 
 about:
   home: https://github.com/DavisVaughan/furrr
-  license: LGPL-2.1-or-later
+  license: MIT
   summary: Implementations of the family of map() functions from 'purrr' that can be resolved using any 'future'-supported backend, e.g. parallel on the local machine or distributed on a compute cluster.
-  license_family: LGPL
-
+  license_family: MIT
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
