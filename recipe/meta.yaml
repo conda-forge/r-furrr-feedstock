@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/furrr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/furrr/furrr_{{ version }}.tar.gz
-  sha256: dd2937f7cad1bc69e7a512b2a777f82d6cb7e40fe99afa2049ca360f9352a9d1
+  sha256: 9d6483656fdb5b90e998e2c2f1494c721185079a1412316c6d391e1eade89e1b
 
 build:
   noarch: generic
   merge_build_host: true  # [win]
-  number: 1002
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
