@@ -5,11 +5,9 @@ Home: https://github.com/DavisVaughan/furrr
 
 Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-furrr-feedstock/blob/master/LICENSE.txt)
 
 Summary: Implementations of the family of map() functions from 'purrr' that can be resolved using any 'future'-supported backend, e.g. parallel on the local machine or distributed on a compute cluster.
-
-
 
 Current build status
 ====================
