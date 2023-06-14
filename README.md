@@ -1,11 +1,11 @@
-About r-furrr
-=============
+About r-furrr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-furrr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/DavisVaughan/furrr
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-furrr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implementations of the family of map() functions from 'purrr' that can be resolved using any 'future'-supported backend, e.g. parallel on the local machine or distributed on a compute cluster.
 
