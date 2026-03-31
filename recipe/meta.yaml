@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/furrr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/furrr/furrr_{{ version }}.tar.gz
-  sha256: 0d91735e2e9be759b1ab148d115c2c7429b79740514778828e5dab631dc0e48b
+  sha256: 82f8d18078fdde968bdf8ea978a91b936a8bc5d0b3f41ce0f6e2c6bc0efce714
 
 build:
-  number: 4
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
